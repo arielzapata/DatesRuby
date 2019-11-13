@@ -5,13 +5,13 @@ require 'stringio'
 
 # Complete the staircase function below.
 def staircase(size)
-  steps_files = 1
+  step_rows = 1
 
-  while steps_files < size + 1
-    filas = "#" * steps_files
-    space = " " * (size - steps_files)
-    puts space + filas
-    steps_files += 1
+  while step_rows < size + 1
+    rows = "#" * step_rows
+    space = " " * (size - step_rows)
+    puts space + rows
+    step_rows += 1
   end
 end
 
