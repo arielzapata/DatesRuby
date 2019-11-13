@@ -1,0 +1,26 @@
+Para hacer squash en el mismo commit
+
+add
+commit -m
+rebase -i HEAD
+cambiar squash
+
+ctrl X
+yes
+ctrl x
+
+git push origin HEAD --force
+
+
+Para hacer commit normal
+
+add archivo
+commit
+git push -u origin master
+
+
+pull request -solicita la rama mas actualizada
+askjfbaksjfbaksjfabksjfasbkfasdasdasdassdasdasdasdasdasdadasdasdasdada
+
+nuevo cambio
+cambiosssssssssssssss
