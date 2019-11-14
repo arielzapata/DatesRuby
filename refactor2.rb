@@ -1,4 +1,3 @@
-
 def longname
   name = fullname
   return unless organization_id
