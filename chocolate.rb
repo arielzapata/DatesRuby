@@ -2,12 +2,12 @@ require 'json'
 require 'stringio'
 
 # Complete the birthday function below.
-def birthday(cholate_bar, day, month)
+def birthday(chocolate_bar, day, month)
   counter_segment = 0
   counter_position=0
   
-  cholate_bar.each do |current_element|
-    segment = cholate_bar.slice(counter_position, month)
+  chocolate_bar.each do |current_element|
+    segment = chocolate_bar.slice(counter_position, month)
     counter_segment += 1 if segment.reduce(:+)  == day
     counter_position+=1
   end
