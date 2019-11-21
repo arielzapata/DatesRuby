@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Date: <input type="text" id="text-field">
+
+<button type="button" onclick="printValue()">sumbit!</button>
+
+<h2 id="datas"></h2>
+
+<script>
+
+  function printValue() {
+    const inputData = document.getElementById("text-field").value;
+    document.getElementById("datas").innerHTML = inputData;
+} 
+
+</script>
+
+</body>
+</html>
