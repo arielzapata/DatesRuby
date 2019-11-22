@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Numero 1: <input type="text" id="number-field">
+
+<br>Numero 2: <input type="text" id="number2-field"></br>
+<br>
+<button id="sum" onClick="operation(this.id)">susm</button>
+<button id="rest" onClick="operation(this.id)">rest</button>
+<button id="mul" onClick="operation(this.id)">multiply</button>
+<button id="div" onClick="operation(this.id)">divide</button>
+</br>
+<p id="result"></p>
+
+<script>
+
+const isNumber = (number, number2) => { 
+    const validation = !Number.isInteger(number) || !Number.isInteger(number2)  
+    if (validation) {document.getElementById("result").innerHTML = "Empty or invalid input"}  
+}
+
+const number = () => {
+   return parseInt(document.getElementById("number-field").value);
+}
+
+const number2 = () => {
+  return parseInt(document.getElementById("number2-field").value);
+}
+    
+operation = (id_operation) => { 
+  let result
+  
+    switch(id_operation) {
+      case "sum": 
+      result = number() + number2();
+      break;
+      case "rest": 
+      result = number() - number2();
+      break;
+      case "mul": 
+      result = number() * number2();
+      break;
+      case "div": 
+      result = number() / number2();
+      break;  
+} 
+  document.getElementById("result").innerHTML = result
+  isNumber(number(), number2())  
+}
+</script>
+
+</body>
+</html>
