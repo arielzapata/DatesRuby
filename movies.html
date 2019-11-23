@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Movies</title>
+      </head>
+ <div class="container">
+    <h2>Movie Information</h2>
+    <p>Next table contain information from amdbapi.com, this provides an large sorting attributes, some of that is showed below:</p>
+    <table class="table" cellspacing="40">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Year</th>
+          <th>Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="movie-info">    
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
+  <script type="text/javascript">
+    const type = "joker";
+    const queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&apikey=40e9cece";
+
+    function getMovies() {
+      axios.get(queryURL)
+      .then(function (response) {
+      $("#movie-info").append('<td>' + response.data.Title + '</td>');
+      $("#movie-info").append('<td>' + response.data.Year + '</td>');
+      $("#movie-info").append('<td>' + response.data.Actors + '</td>');
+      })
+      .catch(function (error) {
+      console.log(error);
+      })
+      .then(function () {
+      });
+    }
+  getMovies()
+  </script>

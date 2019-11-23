@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <br>Number 1: <input type="text" id="number-field"></br>
+  <br>Number 2: <input type="text" id="number2-field"></br>
+  <br>
+  <button id="sum" onClick="operation(this.id)">sum</button>
+  <button id="rest" onClick="operation(this.id)">rest</button>
+  <button id="mul" onClick="operation(this.id)">multiply</button>
+  <button id="div" onClick="operation(this.id)">divide</button>
+  </br>
+  <p id="answer"></p>
+  <script>
+    const isNumber = () => {
+      const joinedNumbers = firstNumber() + secondNumber();
+      return !(joinedNumbers.replace(/\d+/g, '')) == '' || firstNumber() == '' || secondNumber() == '';  
+    }
+
+    const firstNumber = () => {
+      return document.getElementById("number-field").value;
+    }
+
+    const secondNumber = () => {
+      return document.getElementById("number2-field").value;
+    }
+
+    operation = (id_operation) => { 
+      let answerOperation;
+      const numberOne = parseInt(firstNumber());
+      const numberTwo = parseInt(secondNumber());
+      
+      switch(id_operation) {
+      case "sum": 
+        answerOperation = numberOne + numberTwo;
+      break;
+      case "rest": 
+        answerOperation = numberOne - numberTwo;
+      break;
+      case "mul": 
+        answerOperation = numberOne * numberTwo;
+      break;
+      case "div": 
+        answerOperation = numberOne / numberTwo;
+      break;  
+      } 
+      document.getElementById("answer").innerHTML = answerOperation;
+      if (isNumber()){document.getElementById("answer").innerHTML = "Empty or invalid input";}
+    }
+  </script>
+</body>
+</html>
