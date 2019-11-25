@@ -1,18 +1,19 @@
 const numbers = ["13.09.2017", "13.aa.2018", "44.09.2018", "13.09.7"]
-const sortNumbers = []
+const splitNumbers = []
 let positionNumbers = 0
-numbers.filter(number => sortNumbers[positionNumbers++] = number.split('.'))
+numbers.filter(number => splitNumbers[positionNumbers++] = number.split('.'))
 
-sumResult = (sortNumbers) => {
+sumResult = (splitNumbers) => {
   let sum = 0 
-  let positionNumbers = 0
+  positionNumbers = 0
 
-  for(let i = 0 ;i < sortNumbers.length; i++) {
-    if ((sortNumbers[i][positionNumbers].replace(/\d+/g, '')) == '') {
-      sum += parseInt(sortNumbers[i][positionNumbers])
+  for(let position = 0 ;position < splitNumbers.length; position++) {
+    isNumber = (splitNumbers[position][positionNumbers].replace(/\d+/g, '')) == ''
+    if (isNumber) {
+      sum += parseInt(splitNumbers[position][positionNumbers])
       positionNumbers++
     }
   } return sum 
 }
 
-sumResult(sortNumbers, positionNumbers)
+sumResult(splitNumbers, positionNumbers)
