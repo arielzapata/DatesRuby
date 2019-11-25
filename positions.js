@@ -8,11 +8,10 @@ sumResult = (splitNumbers) => {
   positionNumbers = 0
 
   for(let position = 0 ;position < splitNumbers.length; position++) {
-    isNumber = (splitNumbers[position][positionNumbers].replace(/\d+/g, '')) == ''
-    if (isNumber) {
+    isNumber = !(splitNumbers[position][positionNumbers].replace(/\d+/g, '')) == ''
+    if (isNumber) {continue}
       sum += parseInt(splitNumbers[position][positionNumbers])
       positionNumbers++
-    }
   } return sum 
 }
 
