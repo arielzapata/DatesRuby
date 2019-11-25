@@ -11,34 +11,32 @@
     <script>
       const isNumber = (number) => {
         return !(number.replace(/\d+/g, '')) == '' || number == '';  
-      }
-      const firstNumber = () => {
-        return document.getElementById("js-number-field").value;
-      }
-      const secondNumber = () => {
-        return document.getElementById("js-number2-field").value;
-      }
+      }     
+
       const operation = (idOperation) => { 
         let result;
-        const numberOne = parseInt(firstNumber());
-        const numberTwo = parseInt(secondNumber());
+        const numberOne = document.getElementById("js-number-field").value;
+        const numberTwo = document.getElementById("js-number2-field").value;
+        const firsNumber = parseInt(numberOne);
+        const secondNumber = parseInt (numberTwo);
                  
         switch(idOperation) {
           case "sum": 
-            result = numberOne + numberTwo;
+            result = firsNumber + secondNumber;
           break;
           case "rest": 
-            result = numberOne - numberTwo;
+            result = firsNumber - secondNumber;
           break;
           case "mul": 
-            result = numberOne * numberTwo;
+            result = firsNumber * secondNumber;
           break;
           case "div": 
-            result = numberOne / numberTwo;
+            result = firsNumber / secondNumber;
           break;  
         } 
         document.getElementById("js-operation-result").innerHTML = result;
-        if (isNumber(firstNumber()) || isNumber(secondNumber())){
+
+        if (isNumber(numberOne) || isNumber(numberTwo)){
             document.getElementById("js-operation-result").innerHTML = "Empty or invalid input";
         }
       }
