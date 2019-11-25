@@ -7,10 +7,10 @@
     <button id="rest" onClick="operation(this.id)">rest</button>
     <button id="mul" onClick="operation(this.id)">multiply</button>
     <button id="div" onClick="operation(this.id)">divide</button>
-    <p id="js-result-operation"></p>
+    <p id="js-operation-result"></p>
     <script>
-      const isNumber = (numbers) => {
-        return !(numbers.replace(/\d+/g, '')) == '' || firstNumber() == '' || secondNumber() == '';  
+      const isNumber = (number) => {
+        return !(number.replace(/\d+/g, '')) == '' || number == '';  
       }
       const firstNumber = () => {
         return document.getElementById("js-number-field").value;
@@ -18,28 +18,29 @@
       const secondNumber = () => {
         return document.getElementById("js-number2-field").value;
       }
-      operation = (id_operation) => { 
-        let answerOperation;
+      const operation = (idOperation) => { 
+        let result;
         const numberOne = parseInt(firstNumber());
         const numberTwo = parseInt(secondNumber());
-        const numbers = firstNumber() + secondNumber();
-         
-        switch(id_operation) {
+                 
+        switch(idOperation) {
           case "sum": 
-            answerOperation = numberOne + numberTwo;
+            result = numberOne + numberTwo;
           break;
           case "rest": 
-            answerOperation = numberOne - numberTwo;
+            result = numberOne - numberTwo;
           break;
           case "mul": 
-            answerOperation = numberOne * numberTwo;
+            result = numberOne * numberTwo;
           break;
           case "div": 
-            answerOperation = numberOne / numberTwo;
+            result = numberOne / numberTwo;
           break;  
         } 
-        document.getElementById("js-result-operation").innerHTML = answerOperation;
-        if (isNumber(numbers)){document.getElementById("js-result-operation").innerHTML = "Empty or invalid input";}
+        document.getElementById("js-operation-result").innerHTML = result;
+        if (isNumber(firstNumber()) || isNumber(secondNumber())){
+            document.getElementById("js-operation-result").innerHTML = "Empty or invalid input";
+        }
       }
     </script>
   </body>
