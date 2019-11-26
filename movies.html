@@ -30,12 +30,12 @@
       getMovies = () => {
         axios.get(queryURL)
         .then(function (response) {
-        $("#js-movie-info").append('<td>' + response.data.Title + '</td>');
-        $("#js-movie-info").append('<td>' + response.data.Year + '</td>');
-        $("#js-movie-info").append('<td>' + response.data.Actors + '</td>');
+          $("#js-movie-info").append('<td>' + response.data.Title + '</td>');
+          $("#js-movie-info").append('<td>' + response.data.Year + '</td>');
+          $("#js-movie-info").append('<td>' + response.data.Actors + '</td>');
         })
         .catch(function (error) {
-        console.log(error);
+          console.log(error);
         })
         .then(function () {
         });
