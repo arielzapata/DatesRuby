@@ -1,0 +1,87 @@
+.wrapper {
+  display: flex;
+  border-width: thin;
+  border-color:#f6efef;
+  margin: 135px;
+  margin-block-start: 50px;
+  border-style: ridge;
+  height: 285px;
+}
+.wrapper > div {
+  color: white;
+  margin: 0px;
+  padding: 20px; 
+  flex: 1;
+}
+.wrapper > div:nth-child(1){
+  flex: 11;
+  background-image: url("https://http2.mlstatic.com/D_NQ_P_775965-MLM32652738162_102019-F.jpg");
+  background-size: 725px;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0px -147px 40px -14px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0px -147px 40px -14px rgba(0,0,0,0.25);
+  box-shadow: inset 0px -147px 40px -14px rgba(0,0,0,0.25); 
+}
+.wrapper > div:nth-child(2) {
+  flex: 1;  
+}
+.wrapper div .emphasis{  
+  text-align: left;
+  padding-top: 5px ;  
+  font-size: 10px;
+  font-family:Helvetica,Arial,sans-serif;
+  color: #999;
+  margin:-5px;
+  padding-left: 4px;
+  padding-top: 20px;  
+}
+.wrapper div .price{    
+  font-size: 20px;
+  font-family:Helvetica,Arial,sans-serif;
+  color: black;
+  padding-bottom: -10px;
+  margin:-15px;
+  padding-left: 14px;
+  padding-top: 15px; 
+}
+.wrapper div .place{
+  text-align: left;
+  padding-top: 0px; 
+  font-size: 18px;
+  color: #2a63cb;
+  font-family:Helvetica,Arial,sans-serif;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin:-13px;
+  padding-left: 12px;
+  padding-top: 40px;
+}
+.wrapper div .city{  
+  font-size: 14px;
+  color: #999;
+  font-family:Helvetica,Arial,sans-serif;
+}
+.wrapper div .description{ 
+  padding-top: 10px ;
+  color: #999;
+  font-size: 15px;
+  font-family:Helvetica,Arial,sans-serif;
+  width: 255px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-align: left;
+}
+.title {
+  margin: 50px;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+  text-align: center;
+  font-family:'lato',Helvetica,Arial,sans-serif;
+} 
