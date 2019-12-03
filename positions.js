@@ -7,12 +7,12 @@ sumResult = (sortNumbers) => {
   let sum = 0 
   let positionNumbers = 0
 
-  for(let i = 0 ;i < sortNumbers.length; i++) {
+  for(let i =0 ;i < sortNumbers.length; i++) {
     if ((sortNumbers[i][positionNumbers].replace(/\d+/g, '')) == '') {
       sum += parseInt(sortNumbers[i][positionNumbers])
       positionNumbers++
     }
-  } return sum 
+  } return sum; 
 }
 
 sumResult(sortNumbers, positionNumbers)
