@@ -1,0 +1,291 @@
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -38px;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background-image: url("http://d26n5el00vhg2w.cloudfront.net/assets/covers/cover5-bb38e931df30cf728a113cb4365e2abd.jpg");
+  background-size: 100% 130%;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+.header .title {
+  font-size: 30px;
+  width:80%;
+  font-weight: bold;
+  color:white
+}
+.header .terms{
+  color:white;
+  text-decoration:underline;
+}
+.header .form {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width:80%;
+  height: 12%; 
+  background-color: white;
+  border: thin solid grey;
+  border-radius: 4px;
+  margin-left:5px
+ }  
+ .header .form select{
+  width:19.5%;
+  background: white;
+  height: 100%;
+  border:thin solid grey;
+  border-top:none;
+  border-bottom:none;
+  text-align: center;
+  background-image:    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA3klEQVRIS+3VMU9CMRTF8d8zBL+aizoQFhx0kUk33RzdYMNFXUFnYeGrYYyaJiUxJHDLSxodbNKpfeffc9/pbaPyaCrr+3OA++z4rtT5Pg5GuMnCY9yWQEoBE1xhlUUP8YDrCBIB0vojLvGO0yz4hm4JJAKcYYoPHGOZAUdYoIMBXrc5iQAHeMlzviFygj7O8dkWEJU4XI8chALRhn9AVKHf70VRTHu4wFfbmKZLNKt50dLBnna0imcMd/2I0phWa3Y/D1e1Xa9BCZJG0VuQNpaWKMx72xS1Fl5/WN3BN+AgJhnZQlq4AAAAAElFTkSuQmCC');
+  background-position: calc(100% - .5rem), 100% 0;
+  background-size:  1.5em 1.5em;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+ }
+ label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: left;
+  margin-top:0px;
+  margin-right: 10px;
+  width: 25%;
+ }
+ .header .form button{
+  background:rgb(90, 132, 238);
+  height: 100%;
+  width:60px;
+  justify-content: right;
+  align-items: right;
+  align-content: right;
+  margin-right: -40px;
+  color:white;
+}
+ .form input{
+  width: 25.5%;
+  border:none;
+  height: 100%;
+}
+.login > div {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.description{     
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 30px;
+  padding-left:0px;
+  padding-right:0px;
+  margin: 0; 
+} 
+.description img {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 230x;
+  height: 230px;            
+}
+
+.description .title2  {
+  text-align: center;
+  width: 100%;
+  margin-top: 35px;
+  font-size: 25px;
+  margin-bottom: -40px          
+}
+.description figure p{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Abel', sans-serif;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
+  font-size: 11px;      
+}
+.description figure{    
+  width: 300px;
+  font-size: 15px;
+  margin-top: 5%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 30px;
+  padding-left:0px;
+  padding-right:0px;
+  margin: 0;
+  background: #F3F3F3;
+  
+  padding: 0;
+}
+.footer img {
+  height: 20%;
+  width: 45%;
+  padding-top: 25px;  
+}
+
+.footer button{
+  background:rgb(90, 132, 238);
+  width: 280px;
+  height: 35px;
+  color:white;
+}
+
+.footer .p1{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom:-30px
+}
+
+.footer .p2{
+  width:35%;
+  font-size:20px
+}
+body{
+  font-family:sans-serif;
+}
+.login {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  justify-content:flex-end;
+  margin-bottom:-60px;
+  margin-right:65px;
+  padding: -50px;
+  color:white
+}
+.login > div:nth-child(1) {
+ 
+  border:solid 1px white;
+  width: 35px;
+  height: 40px;
+  margin: 0px;
+  text-align: center;
+  line-height: 75px;
+ 
+  font-size:13px;
+  line-height: 38px;
+}
+.login > div:nth-child(2) {
+  border:solid 1px white;
+  border-left: none;
+  width: 60px;
+  height: 40px;
+  margin: 0px;
+  text-align: center;
+  line-height: 75px;
+  font-size:13px;
+  line-height: 38px;
+}
+@media screen and (max-width: 900px) {
+  .header .form select {
+    background-image:none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: -38px;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    background-image: url("https://img10.naventcdn.com/home/RPHOMv2.8.1-RC1/images/dfp-venta.jpg");
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+  .header .form select {
+    overflow: hidden;
+    display:none
+  }
+  label{
+    display:none
+  }
+  .form input{
+    width: 80%;
+    border:none;
+    height: 100%;
+  }
+  .header .form {  
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width:75%;
+    margin-left:40px;
+  } 
+  .header .title {
+    font-size: 20px;
+    width:90%;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 15px;
+  }
+  .login {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+    justify-content:flex-end;
+    margin-bottom:-60px;
+    margin-right:20px;
+    color:white
+  }
+  .footer .p2{
+    width:100%;
+    font-size:20px
+  }
+  .description .title2  {
+    text-align: center;
+    width: 100%;
+    margin-top: 35px;
+    font-size: 23px;
+    margin-bottom: -20px;
+    margin-top: 15px;          
+  }
+  .header .form button{
+    background:rgb(90, 132, 238);
+    height: 95%;
+    width:60px;
+    justify-content: right;
+    align-items: right;
+    align-content: right;
+    margin-right: -40px;
+    color:white;
+    margin-bottom: 2px;
+    margin-right: -19px;
+  }
+}
+
