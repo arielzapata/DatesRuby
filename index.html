@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" type="text/css" media="all">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>  
+  <div class="head">
+    <p >Elige tu forma de pago</p>
+  </div>  
+  
+  <div class="payment">         
+    <div>
+      <img src="https://cdn.discordapp.com/attachments/640971910460604436/653685772712411137/unknown.png">    
+      <p>Tarjeta de crédito o débito</p>
+    </div>
+    <div>
+      <img onclick="getVisa()" id="js-visa" class="visa" src="https://cdn.discordapp.com/attachments/640971910460604436/653685392700080149/visa.png">
+      <img onclick="getMasterCard()" id="js-mastercard" class= "mastercard" src=https://cdn.discordapp.com/attachments/640971910460604436/653685445502435359/mastercard.png>
+      <img onclick="getAmex()" id="js-amex" class="amex" src=https://cdn.discordapp.com/attachments/640971910460604436/653685474002599976/amex.png>
+    </div>  
+    <div>
+      <p>Nombre completo</p>
+      <input type="text" placeholder="  Nombre">
+    </div>
+    <div>
+      <div>Vigencia CVC</div>
+    </div>
+    <div>       
+      <input type="text" placeholder="  mm/aa">         
+      <input type="text" placeholder="    ____">      
+    </div>
+    <div>      
+      <p>Número de tarjeta</p>        
+      <input type="text" placeholder="  _________________">      
+    </div> 
+      <div><p>Código postal</p>         
+      <input type="text"placeholder="  ______">      
+    </div> 
+    <div  id="js-master-card">
+      <p class="code-mc">Tienes un código MasterCard? escribelo aquí</p>
+      <input type="text" >
+      <p class="code-info">utiliza el código HOMIEMC al pagar con tu tarjeta MASTERCARD y 
+         recibe beneficios exclusivos
+      </p>
+    </div>
+    <div>
+      <div>              
+        <label class="container">Guardar tarjeta en cuenta
+          <input type="checkbox">
+          <span class="checkmark"></span>
+       </label>
+      </div>
+    </div>
+    <div>
+      <button>pagar</button>
+      <p id="js-comission"></p>
+    </div>
+  </div>
+<script>
+  document.getElementById("js-master-card").style.display = "none";
+
+  const getVisa = () => {
+    document.getElementById("js-master-card").style.display = "none";
+    document.getElementById("js-comission").innerHTML = "*Se cobrara el 2.65% por comision";
+    setBorder("4px solid rgb(204, 204, 204)","4px solid rgb(141, 122, 255)","4px solid rgb(204, 204, 204)")
+  } 
+  const getMasterCard = () =>  {
+    document.getElementById("js-master-card").style.display = "block";
+    document.getElementById("js-comission").innerHTML = "*Se cobrara el 2.65% por comision";
+    setBorder("4px solid rgb(141, 122, 255)","4px solid rgb(204, 204, 204)","4px solid rgb(204, 204, 204)")
+  }
+  const getAmex = () =>  {
+    document.getElementById("js-master-card").style.display = "none";
+    document.getElementById("js-comission").innerHTML = "*Se cobrara el 3.65% por comision";
+    setBorder("4px solid rgb(204, 204, 204)","4px solid rgb(204, 204, 204)","4px solid rgb(141, 122, 255)")    
+  }  
+  const setBorder = (mastercard, visa, amex) => {
+    document.getElementById("js-mastercard").style.border=mastercard;
+    document.getElementById("js-visa").style.border=visa;
+    document.getElementById("js-amex").style.border=amex;
+  }
+
+</script>
+</body>
+</html> 
